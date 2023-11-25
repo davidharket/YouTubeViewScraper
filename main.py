@@ -45,9 +45,9 @@ def extract_metadata_spans(url):
     return list_spans
 
 
-def str_to_int(view_str):
+def str_to_float(view_str):
     """
-       Convert a string representation of a number, possibly with units 'k' or 'mill.', to an integer.
+       Convert a string representation of a number, possibly with units 'k' or 'mill.', to a float.
 
        This function is designed to parse strings that represent numbers, potentially followed by
        a unit ('k' for thousand or 'mill.' for million), and convert them into their numerical value.
@@ -66,11 +66,11 @@ def str_to_int(view_str):
        ValueError: If the input is not a string or if the format is incorrect.
 
        Examples:
-       >>> str_to_int("1,5k")
+       >>> str_to_float("1,5k")
        1500.0
-       >>> str_to_int("2.3mill.")
+       >>> str_to_float("2.3mill.")
        2300000.0
-       >>> str_to_int("1234")
+       >>> str_to_float("1234")
        1234.0
 
        Notes:
@@ -101,5 +101,5 @@ def str_to_int(view_str):
 # Test the function with some examples
 url = "https://youtube.com/"
 
-converted_values = [str_to_int(s) for s in extract_metadata_spans(url=url)]
+converted_values = [str_to_float(s) for s in extract_metadata_spans(url=url)]
 print(converted_values)
