@@ -11,7 +11,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
-profile_path = "C:/Users/bruker/AppData/Local/Google/Chrome/User Data/Default" 
+profile_path = "path/to/your/chrome/profile" # Add your chrome profile path here. If not, YouTube will not provide any content.
 
 
 
