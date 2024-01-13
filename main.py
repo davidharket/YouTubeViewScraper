@@ -11,7 +11,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 
 print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
-profile_path = "C:/Users/bruker/AppData/Local/Google/Chrome/User Data/Default"
+profile_path = "C:/Users/bruker/AppData/Local/Google/Chrome/User Data/Default" 
 
 
 
@@ -237,9 +237,13 @@ content_dict = extract_data(url=url)
 
 
 #Create a dictionary for easy access to the data
-
 data_dict = {}
+first_key = next(iter(content_dict))
+
 for key in content_dict.keys():
+    if key == first_key:
+        continue  # Skip the first element (it is redundant)
+
     title = key
     views = str_to_n_views(content_dict[key]["views"])
     duration = str_to_s_duration(content_dict[key]["duration"])
@@ -247,6 +251,7 @@ for key in content_dict.keys():
     # Add to data_dict only if both views and duration are not None
     if views is not None and duration is not None:
         data_dict[title] = {"views": views, "duration": duration}
+
 
 
 #Add data to database
