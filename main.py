@@ -45,13 +45,14 @@ def add_to_db(list_of_titles, list_of_views, list_of_durations):
 #Extract data from YouTube
 def extract_data(url):
     """
-    Extracts viewer counts in string format from YouTube
+    Extracts all content titles, viewer counts, and video durations form YouTubes
+    recomended page as string and prepares all values for data analysis.
 
     Parameters:
     url (str): URL of any YouTube front page
 
     Returns:
-    list[str]: A list of text items extracted from the specified span elements.
+    dict[dict]: A nested dictionary containing the all values extracted.
 
     This function initializes a WebDriver to load the given URL, waits for
     metadata elements to load, and extracts text from specific span elements.
