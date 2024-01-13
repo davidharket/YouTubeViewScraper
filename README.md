@@ -11,7 +11,7 @@ To run this demo, follow the installation guide and run the main.py file.
 ## Installation
 1.  Clone this repo (!git clone https://github.com/davidharket/YouTubeViewScraper)
 2.  Install required packages (!pip install -r requirements.txt)
-3.  Change the value of the profile_path variable on line 14 (often C:/Users/bruker/AppData/Local/Google/Chrome/User Data/Default).
+3.  Change the value of the profile_path variable on line 14 (often C:/Users/User/AppData/Local/Google/Chrome/User Data/Default).
 4.  Install a Chrome Web Driver if not already acquired (download is available here: https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/).
 5.  Run main.py
 
