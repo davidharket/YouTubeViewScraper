@@ -19,5 +19,5 @@ To run this demo, follow the installation guide and run the main.py file.
 This is just a demonstration, but in running the script, a database containing the date of data collection, title of the video investigated, view count associated with the corresponding video, and duration time (in seconds) associated with the corresponding video for all elements scraped will be produced.
 
 Here is a screenshot of the collected data displayed in the DB Browser (SQLite) desktop application
-![Screenshot of result](/images/screenshot.png)
+![Screenshot of result](/screenshot.png)
 
